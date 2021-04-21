@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="San">
 <meta property="og:description" content="San can be installed and used in many ways. Downloadfrom Github ReleasesBoth the latest and history versions are available on Github Releases. from CDNSkip the download and make use of the unpkg CDN:">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-31T01:25:40.050Z">
+<meta property="og:updated_time" content="2021-04-21T07:02:59.295Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Setup">
 <meta name="twitter:description" content="San can be installed and used in many ways. Downloadfrom Github ReleasesBoth the latest and history versions are available on Github Releases. from CDNSkip the download and make use of the unpkg CDN:">
@@ -67,14 +67,15 @@ var _hmt = _hmt || [];
     <div class="header-content">
         <nav class="header-content-nav">
             <ul>
-                <li><a class="router" href="../start/">Tutorial</a>
-                <li><a class="router" href="../../practice/">Practice</a>
-                <li><a class="router" href="../../example/">Example</a>
-                <li><a class="router" href="../../doc/api/">API</a>
-                <li><a class="router" href="https://github.com/baidu/san" class="github" target="_blank">
-                    <img src="../../../img/github2.svg" width="20" height="20">
-                </a>
+                <li><a class="router" href="../start/">Tutorial</a></li>
+                <li><a class="router" href="../../practice/">Practice</a></li>
+                <li><a class="router" href="../../example/">Example</a></li>
+                <li><a class="router" href="../../doc/api/">API</a></li>
+                <li><a class="router" href="https://github.com/baidu/san/discussions" class="github" target="_blank">Discussions</a></li>
                 <li>
+                    <a class="router" href="https://github.com/baidu/san" class="github" target="_blank">
+                        <img src="../../../img/github2.svg" width="20" height="20">
+                    </a>
                 </li>
             </ul>
             <div class="search-input">
@@ -97,6 +98,7 @@ var _hmt = _hmt || [];
         debug: false // Set debug to true if you want to inspect the dropdown
     });
 </script>
+
   <main>
 <aside class="recommend">    <dl>
         <dt>Tutorial</dt>
@@ -176,6 +178,7 @@ var _hmt = _hmt || [];
 </blockquote>
 <h3 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h3><p>Via NPM is recommended when used to build large-scaled applications.<br>NPM is a package manager with a large community, which is especially useful when it comes to development tooling.</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> install the latest version</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> npm install san</span></span><br></pre></td></tr></table></figure>
+<h3 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h3><p>San provides an official CLI for quickly scaffolding ambitious projects. It provides out-of-the-box build setup for modern front-end workflows, takes just a few minutes to get a brand new San project up and running, and comes with useful features such as hot reloading, code linting, and build versions available for production environments. It also has a graphical user interface. Details are available in <a href="(https://ecomfe.github.io/san-cli/">the San CLI documentation</a>).</p>
 <h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><h3 id="script"><a href="#script" class="headerlink" title="script"></a>script</h3><p>It is a common way to load san via a script tag on the page. The <code>src</code> URL can be either a CDN location or a local file URL.</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- load your local copy --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"&lt;path to san&gt;/dist/san.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- load san from node_modules --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"node_modules/san/dist/san.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Note: when san is being loaded,</p>
@@ -209,7 +212,7 @@ var _hmt = _hmt || [];
 </article>
 
 <aside class="toc-wrap">
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Download"><span class="toc-text">Download</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#from-Github-Releases"><span class="toc-text">from Github Releases</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#from-CDN"><span class="toc-text">from CDN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NPM"><span class="toc-text">NPM</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Usage"><span class="toc-text">Usage</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#script"><span class="toc-text">script</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AMD"><span class="toc-text">AMD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ESNext"><span class="toc-text">ESNext</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#San-Component"><span class="toc-text">San Component</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Development-vs-Production"><span class="toc-text">Development vs. Production</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Download"><span class="toc-text">Download</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#from-Github-Releases"><span class="toc-text">from Github Releases</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#from-CDN"><span class="toc-text">from CDN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NPM"><span class="toc-text">NPM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CLI"><span class="toc-text">CLI</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Usage"><span class="toc-text">Usage</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#script"><span class="toc-text">script</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AMD"><span class="toc-text">AMD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ESNext"><span class="toc-text">ESNext</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#San-Component"><span class="toc-text">San Component</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Development-vs-Production"><span class="toc-text">Development vs. Production</span></a></li></ol>
   <a href="#" class="toc-top">Top</a>
 </aside>
 
