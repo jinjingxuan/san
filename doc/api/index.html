@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="San">
 <meta property="og:description" content="该文档描述了组件的 API，在 San 主模块上暴露的 API 请参考文档 主模块API。 初始化参数data解释： 组件初始化数据。通常在组件反解的场景下使用。 类型： Object 用法： 1234567891011121314var MyComponent = san.defineComponent(&amp;#123;&amp;#125;);var myComponent = new MyComponen">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-07-02T07:16:02.584Z">
+<meta property="og:updated_time" content="2021-08-10T06:10:30.302Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="组件API">
 <meta name="twitter:description" content="该文档描述了组件的 API，在 San 主模块上暴露的 API 请参考文档 主模块API。 初始化参数data解释： 组件初始化数据。通常在组件反解的场景下使用。 类型： Object 用法： 1234567891011121314var MyComponent = san.defineComponent(&amp;#123;&amp;#125;);var myComponent = new MyComponen">
@@ -137,7 +137,7 @@ var _hmt = _hmt || [];
         <dd><a href="https://github.com/ecomfe/san-cli" target="_blank">san-cli</a></dd>
         <dd><a href="https://github.com/ecomfe/san-loader" target="_blank">san-loader</a></dd>
         <dd><a href="https://github.com/baidu/san-factory" target="_blank">san-factory</a></dd>
-        <dd><a href="https://github.com/ssddi456/drei" target="_blank">drei</a></dd>
+        <dd><a href="https://github.com/searchfe/sanny" target="_blank">sanny</a></dd>
         <dd><a href="https://ecomfe.github.io/san-mui/" target="_blank">san-mui</a></dd>
         <dd><a href="https://github.com/ecomfe/san-anode-utils" target="_blank">san-anode-utils</a></dd>
         <dd><a href="https://github.com/ecomfe/san-test-utils" target="_blank">san-test-utils</a></dd>
@@ -193,11 +193,11 @@ var _hmt = _hmt || [];
 <h3 id="source"><a href="#source" class="headerlink" title="source"></a>source</h3><p><code>版本</code>：&gt;= 3.7.0</p>
 <p><code>类型</code>： string|Object</p>
 <p><code>解释</code>：</p>
-<p>通过 HTML 格式的一个标签，声明组件与 owner 之间的数据绑定和事件。指定 source 同时需要指定 owner。更详细的用法请参考 <a href="../../tutorial/component/#动态子组件">动态子组件</a> 文档，更多声明格式细节请参考 <a href="../../tutorial/template/">模板</a> 与 <a href="../../tutorial/event/">事件</a> 文档。</p>
+<p>通过 HTML 格式的一个标签，声明组件与 owner 之间的数据绑定和事件。指定 source 同时需要指定 owner。更详细的用法请参考 <a href="../../tutorial/component/#手动创建子组件">手动创建子组件</a> 文档，更多声明格式细节请参考 <a href="../../tutorial/template/">模板</a> 与 <a href="../../tutorial/event/">事件</a> 文档。</p>
 <p><code>提醒</code>：</p>
 <p>source 串的标签名称通常没什么用，除了以下情况：组件本身根节点为 template 时，以 source 的标签名称为准。</p>
 <p><code>用法</code>：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">san.defineComponent(&#123;</span><br><span class="line">    mainClick: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="keyword">this</span>.calendar) &#123;</span><br><span class="line">            <span class="keyword">this</span>.calendar = <span class="keyword">new</span> Calendar(&#123;</span><br><span class="line">                owner: <span class="keyword">this</span>,</span><br><span class="line">                source: <span class="string">'&lt;x-cal value="&#123;&#123;birthday&#125;&#125;'</span> on-change=<span class="string">"birthdayChange($event)"</span>/&gt;<span class="string">'</span></span><br><span class="line"><span class="string">            &#125;);</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">            this.calendar.attach(document.body);</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;,</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    birthdayChange: function (value) &#123;</span></span><br><span class="line"><span class="string">        this.data.set('</span>birthday<span class="string">', value);</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;);</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">san.defineComponent(&#123;</span><br><span class="line">    mainClick: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="keyword">this</span>.calendar) &#123;</span><br><span class="line">            <span class="keyword">this</span>.calendar = <span class="keyword">new</span> Calendar(&#123;</span><br><span class="line">                owner: <span class="keyword">this</span>,</span><br><span class="line">                source: <span class="string">'&lt;x-cal value="&#123;&#123;birthday&#125;&#125;" on-change="birthdayChange($event)"/&gt;'</span></span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">this</span>.calendar.attach(<span class="built_in">document</span>.body);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    birthdayChange: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.data.set(<span class="string">'birthday'</span>, value);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h3 id="transition"><a href="#transition" class="headerlink" title="transition"></a>transition</h3><p><code>版本</code>：&gt;= 3.6.0</p>
 <p><code>类型</code>： Object</p>
 <p><code>解释</code>：</p>
@@ -395,7 +395,7 @@ var _hmt = _hmt || [];
         <dd><a href="https://github.com/ecomfe/san-cli" target="_blank">san-cli</a></dd>
         <dd><a href="https://github.com/ecomfe/san-loader" target="_blank">san-loader</a></dd>
         <dd><a href="https://github.com/baidu/san-factory" target="_blank">san-factory</a></dd>
-        <dd><a href="https://github.com/ssddi456/drei" target="_blank">drei</a></dd>
+        <dd><a href="https://github.com/searchfe/sanny" target="_blank">sanny</a></dd>
         <dd><a href="https://ecomfe.github.io/san-mui/" target="_blank">san-mui</a></dd>
         <dd><a href="https://github.com/ecomfe/san-anode-utils" target="_blank">san-anode-utils</a></dd>
         <dd><a href="https://github.com/ecomfe/san-test-utils" target="_blank">san-test-utils</a></dd>
